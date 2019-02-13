@@ -1,0 +1,17 @@
+footer {
+    overflow-x: auto;
+    height: 200px;
+    background-color: rgb(33, 103, 120);
+    color: white;
+}
+
+.iconos {
+  margin-left:43%;
+}
+.iconos > i {
+    padding-left: 35px;
+}
+
+.contacto {
+    margin-left: 85%;
+}

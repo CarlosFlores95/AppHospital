@@ -1,0 +1,25 @@
+/*////////////////////////////////////////////////Barra de navegacion*/
+
+.img-logo {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+
+a .navbar-brand{
+    font-size: 1.5rem;
+
+}
+
+li .nav-link:hover  {
+    background-color: rgb(43, 124,145);
+}
+nav.navbar {
+    position: fixed;
+    background-color: rgb(33, 103, 120);
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+ li > a {
+     color: white;
+ }
