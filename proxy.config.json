@@ -1,0 +1,7 @@
+{
+"/cita":{
+    "target": "http://192.168.66.35",
+    "secure": false,
+    "logLevel": "debug"
+    }
+}

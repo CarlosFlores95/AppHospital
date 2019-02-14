@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 //Rutas
@@ -34,12 +36,14 @@ import { AgregarPacienteComponent } from './Componentes/Paciente/agregar-pacient
     BodyComponent,
     AgregarDoctorComponent,
     AgregarPacienteComponent
+  
     
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     RouterModule.forRoot(RUTAS_INICIO, {useHash: false})
   ],
   providers: [],
