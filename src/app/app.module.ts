@@ -12,32 +12,36 @@ import { RUTAS_INICIO } from './Rutas/app.acceso';
 
 //Componentes
 import { AppComponent } from './app.component';
-import { VerPacientesComponent } from './Componentes/Paciente/ver-pacientes/ver-pacientes.component';
 import { VerCitasComponent } from './Componentes/Doctor/ver-citas/ver-citas.component';
-import { InicioPacienteComponent } from './Componentes/Paciente/inicio-paciente/inicio-paciente.component';
 import { HeaderComponent } from './Estatico/header/header.component';
 import { FooterComponent } from './Estatico/footer/footer.component';
 import { BodyComponent } from './Estatico/body/body.component';
 import { AgregarDoctorComponent } from './Componentes/Admin/agregar-doctor/agregar-doctor.component';
 import { AgregarPacienteComponent } from './Componentes/Paciente/agregar-paciente/agregar-paciente.component';
+import { VerDoctoresComponent } from './Componentes/Admin/ver-doctores/ver-doctores.component';
+import { AgregarCitaComponent } from './Componentes/Paciente/agregar-cita/agregar-cita.component';
+import { VerPacientesComponent } from './Componentes/Admin/ver-pacientes/ver-pacientes.component';
 
 
 //Servicios
+import { CitaService } from './Services/cita.service';
+import { DoctorService } from './Services/doctor.service';
+import { PacienteService } from './Services/paciente.service';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    VerPacientesComponent,
     VerCitasComponent,
-    InicioPacienteComponent,
     HeaderComponent,
     FooterComponent,
     BodyComponent,
     AgregarDoctorComponent,
-    AgregarPacienteComponent
-  
-    
+    AgregarPacienteComponent,
+    VerDoctoresComponent,
+    AgregarCitaComponent,
+    VerPacientesComponent
 
   ],
   imports: [
@@ -46,7 +50,7 @@ import { AgregarPacienteComponent } from './Componentes/Paciente/agregar-pacient
     HttpClientModule,
     RouterModule.forRoot(RUTAS_INICIO, {useHash: false})
   ],
-  providers: [],
+  providers: [PacienteService, DoctorService, CitaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

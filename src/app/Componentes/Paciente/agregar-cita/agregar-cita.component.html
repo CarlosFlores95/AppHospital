@@ -1,0 +1,34 @@
+<div class="container animated fadeIn fast">
+  <div class="row">
+      <form class="col s12">
+      <h1><i class="fas fa-user-injured"></i> Registrar Cita</h1>
+      <hr>
+      <div class="form-group row">
+          <div class="input col-sm-6">
+              <label for="consultorio"><i class="fas fa-door-open"></i> Consultorio:</label>
+              <input id="consultorio" type="text" class="form-control" #consultorio>
+          </div>
+          <div class="input col-sm-3">
+              <label for="fecha"><i class="fas fa-calendar-week"></i> Fecha: </label>
+              <input id="fecha" type="date" class="form-control" #fecha>
+          </div>
+      </div>
+      <div class="form-group row">
+          <div class="input col-sm-6">
+              <label for="doctor"><i class="fas fa-id-card"></i>Doctor:</label>
+              <input id="doctor" type="text" class="form-control" #doctor>
+          </div>
+      </div>
+      <div class="form-group row">
+          <div class="input col-sm-6">
+              <label for="paciente"><i class="fas fa-user"></i> Paciente:</label>
+              <input id="paciente" type="text" class="form-control" #paciente>
+          </div>
+      </div>
+      <div class="form-group">
+          <button class="btn btn-info btn-large" (click)="crearCita(consultorio.value, fecha.value, doctor.value, paciente.value)"><i class="fas fa-check"></i> REGISTRAR</button>
+      </div>
+      </form>
+  </div> 
+</div> 
+

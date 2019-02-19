@@ -1,0 +1,19 @@
+<div class="container animated fadeIn fast">
+  <h1>Pacientes</h1>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Usuario</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let paciente of pacientesData">
+            <th scope="row">{{paciente.nombre}}</th>
+            <td>{{paciente.edad}}</td>
+            <td>{{paciente.nombreUsuario}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

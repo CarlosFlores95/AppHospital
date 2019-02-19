@@ -5,15 +5,28 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CitaService {
-  private url = "http://192.168.66.35:8080/cita";
+  private url = "http://localhost:8083/cita";
   private header;
-  constructor( private http:HttpClient) {
-    this.header = new HttpHeaders().set('Content-Type','application/json')
+  constructor( private http:HttpClient ) {
+    this.header = new HttpHeaders()
+    .set('Content-Type','application/json')
     .set('Access-Control-Allow-Origin', '*')
     .set('Access-Control-Allow-Credentials','true')
    }
 
   getCitas() {
     return this.http.get<any>(this.url, {headers:this.header});
+  }
+  
+  postCita(cita){
+    return this.http.post<any>(this.url, JSON.stringify(cita), {headers: this.header}).subscribe(
+      (data:any) => {
+        console.log(data);
+      }, error =>{
+        console.log(error);
+
+      }  
+    );
+    
   }
 }
